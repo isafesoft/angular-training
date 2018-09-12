@@ -4,14 +4,8 @@
          <!--[ngModel]="name"-->
          <!--(ngModelChange)="handleChange($event)"-->
   <!--&gt;-->
-  <input type="text"
-         [(ngModel)]="name"
-  >
-
-  <input type="text"
-         [value]="name">
-
-  <button (click)="handleClick($event)">Reset Name</button>
+  <input type="text" #username >
+  <button (click)="handleClick(username.value)">Get Name</button>
   <!--One-way data binding-->
   {{ name }}
   <!--element.value = 'Todd'-->

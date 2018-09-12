@@ -23,6 +23,6 @@ export class AppComponent {
   }
 
   handleClick(event) {
-    this.name = 'Mark';
+    this.name = event;
   }
 }
