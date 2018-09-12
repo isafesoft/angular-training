@@ -11,4 +11,9 @@ export class AppComponent {
   numberTwo = 2;
   isHappy = true;
   date = Date.now();
+  name = '';
+
+  handleInput(event) {
+   this.name = event;
+  }
 }
