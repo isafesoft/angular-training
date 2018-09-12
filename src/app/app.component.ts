@@ -18,8 +18,8 @@ export class AppComponent {
     this.name = event.target.value;
   }
 
-  handleInput(event) {
-    this.name = event.target.value;
+  handleChange(event) {
+    this.name = event;
   }
 
   handleClick(event) {

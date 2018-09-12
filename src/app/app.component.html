@@ -1,10 +1,15 @@
 <div class="app">
 
+  <!--<input type="text"-->
+         <!--[ngModel]="name"-->
+         <!--(ngModelChange)="handleChange($event)"-->
+  <!--&gt;-->
   <input type="text"
-         [value]="name"
-         (blur)="handleBlur($event)"
-         (input)="handleInput($event)"
+         [(ngModel)]="name"
   >
+
+  <input type="text"
+         [value]="name">
 
   <button (click)="handleClick($event)">Reset Name</button>
   <!--One-way data binding-->
