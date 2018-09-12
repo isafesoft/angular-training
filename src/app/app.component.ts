@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+interface Passenger {
+  id: number;
+  fullname: string;
+  checkedIn: boolean;
+}
 
 @Component({
   selector: 'app-root',
@@ -6,14 +11,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Mark Template Lesson 1';
-  numberOne = 1;
-  numberTwo = 2;
-  isHappy = true;
-  date = Date.now();
-  name = '';
-
-  handleInput(event) {
-   this.name = event;
-  }
+  passengers: Passenger[] = [{
+    id: 1,
+    fullname: 'Stephen',
+    checkedIn: false,
+  },
+    {
+    id: 2,
+    fullname: 'Mark',
+    checkedIn: true
+  }];
 }

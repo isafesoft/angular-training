@@ -1,11 +1,9 @@
 <div class="app">
-  <input type="text" (input)="handleInput($event.target.value)"
-    [value]="name"
-  >
-
-  <div *ngIf="name.length > 2">
-   Searching for .... {{ name }}
-  </div>
-
-
+  <h3>Airline Passengers</h3>
+  {{ passengers.length }}
+  <ul>
+    <li *ngFor="let p of passengers; let i = index">
+      {{ i }}: {{ p.fullname }}
+    </li>
+  </ul>
 </div>
