@@ -1,5 +1,10 @@
 <div class="app">
-  {{ title + date.propotype.getDate()}}
+  {{ title + date.getDate()}}
   {{ numberOne + numberTwo }}
   {{ isHappy ? ':)' : ':('}}
+
+  <input type="text" [value]="name">
+  <!--One-way data binding-->
+  {{ name }}
+  <!--element.value = 'Todd'-->
 </div>
