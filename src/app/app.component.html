@@ -1,5 +1,10 @@
 <div class="app">
-  {{ title + date.propotype.getDate()}}
+  <h1>
+    {{ title }}
+  </h1>
+
+  <h1 [innerHTML]="title"></h1>
+
   {{ numberOne + numberTwo }}
   {{ isHappy ? ':)' : ':('}}
 </div>

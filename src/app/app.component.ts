@@ -10,5 +10,5 @@ export class AppComponent {
   numberOne = 1;
   numberTwo = 2;
   isHappy = true;
-  date = Date.prototype.getDate(); // date.now()
+  date = Date.now();
 }
