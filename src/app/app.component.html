@@ -1,9 +1,12 @@
 <div class="app">
-  {{ title + date.getDate()}}
-  {{ numberOne + numberTwo }}
-  {{ isHappy ? ':)' : ':('}}
 
-  <input type="text" [value]="name">
+  <input type="text"
+         [value]="name"
+         (blur)="handleBlur($event)"
+         (input)="handleInput($event)"
+  >
+
+  <button (click)="handleClick($event)">Reset Name</button>
   <!--One-way data binding-->
   {{ name }}
   <!--element.value = 'Todd'-->

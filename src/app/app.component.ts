@@ -13,4 +13,16 @@ export class AppComponent {
   date = new Date(); // date.now()
 
   name = 'Todd';
+
+  handleBlur(event) {
+    this.name = event.target.value;
+  }
+
+  handleInput(event) {
+    this.name = event.target.value;
+  }
+
+  handleClick(event) {
+    this.name = 'Mark';
+  }
 }
