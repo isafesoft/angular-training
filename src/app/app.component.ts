@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'basic';
+  title = 'Mark Template Lesson 1';
+  numberOne = 1;
+  numberTwo = 2;
+  isHappy = true;
+  date = Date.prototype.getDate(); // date.now()
 }
