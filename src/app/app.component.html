@@ -10,6 +10,10 @@
             [ngClass]="{'checked-in': p.checkedIn}"
       ></span>
       {{ p.checkedIn }}
+      <span class="status"
+            [style.backgroundColor]="(p.checkedIn ? 'red' : 'green')"
+      ></span>
+
     </li>
   </ul>
 </div>
