@@ -4,6 +4,12 @@
   <ul>
     <li *ngFor="let p of passengers; let i = index">
       {{ i }}: {{ p.fullname }}
+      <!--<span class="status"-->
+      <!--[class.checked-in]="p.checkedIn"></span>-->
+      <span class="status"
+            [ngClass]="{'checked-in': p.checkedIn}"
+      ></span>
+      {{ p.checkedIn }}
     </li>
   </ul>
 </div>
