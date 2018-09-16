@@ -3,6 +3,7 @@ interface Passenger {
   id: number;
   fullname: string;
   checkedIn: boolean;
+  checkedInDate: number | null;
 }
 
 @Component({
@@ -14,11 +15,13 @@ export class AppComponent {
   passengers: Passenger[] = [{
     id: 1,
     fullname: 'Stephen',
-    checkedIn: false,
+    checkedIn: true,
+    checkedInDate: 149074200000
   },
     {
     id: 2,
     fullname: 'Mark',
-    checkedIn: true
+    checkedIn: false,
+      checkedInDate: null
   }];
 }

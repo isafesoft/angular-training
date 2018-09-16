@@ -13,6 +13,10 @@
       <span class="status"
             [style.backgroundColor]="(p.checkedIn ? 'red' : 'green')"
       ></span>
+      <div class="date">
+        Check in date:
+        {{ p.checkedInDate | date: 'yMMMMd' | uppercase}}
+      </div>
 
     </li>
   </ul>
