@@ -17,6 +17,9 @@
         Check in date:
         {{ p.checkedInDate | date: 'yMMMMd' | uppercase}}
       </div>
+      <div>
+        Children number: {{ p.children?.length || 0}}
+      </div>
 
     </li>
   </ul>

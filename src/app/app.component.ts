@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
+interface Child {
+  name: string;
+  age: number;
+}
+
 interface Passenger {
   id: number;
   fullname: string;
   checkedIn: boolean;
   checkedInDate: number | null;
+  children: Child[] | null;
 }
 
 @Component({
@@ -16,12 +22,14 @@ export class AppComponent {
     id: 1,
     fullname: 'Stephen',
     checkedIn: true,
-    checkedInDate: 149074200000
+    checkedInDate: 149074200000,
+    children: [{name: 'Tobe', age: 6}, {name: 'Tony', age: 9}]
   },
     {
     id: 2,
     fullname: 'Mark',
     checkedIn: false,
-      checkedInDate: null
+      checkedInDate: null,
+      children: null
   }];
 }
