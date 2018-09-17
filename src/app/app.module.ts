@@ -1,4 +1,4 @@
-import { DashboardModule } from './dashboard/dashboard/dashboard.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 

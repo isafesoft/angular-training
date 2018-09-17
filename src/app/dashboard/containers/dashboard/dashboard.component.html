@@ -1,0 +1,29 @@
+<div>
+Passenger number: {{ passengers.length }}
+</div>
+  <ul>
+    <li *ngFor="let p of passengers; let i = index">
+      <div>{{ p | json }}</div>
+      <div>
+      <span class="status"
+            [ngClass]="{'checked-in': p.checkedIn}"
+      ></span>
+        {{ i }} : {{ p.fullname }} </div>
+      
+      <!--<span class="status"-->
+      <!--[class.checked-in]="p.checkedIn"></span>-->
+      <div>
+      </div>
+      <!-- <span class="status"
+            [style.backgroundColor]="(p.checkedIn ? 'red' : 'green')"
+      ></span> -->
+      <div class="date">
+        Check in date:
+        {{ p.checkedInDate | date: 'yMMMMd' | uppercase}}
+      </div>
+      <div>
+        Children number: {{ p.children?.length || 0}}
+      </div>
+
+    </li>
+  </ul>
