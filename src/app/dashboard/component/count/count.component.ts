@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Passenger} from '../../../models/passenger';
 
 @Component({
   selector: 'app-passenger-count',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CountComponent implements OnInit {
 
+  @Input() items: Passenger[];
+  checkedIn: number = 0;
   constructor() { }
 
   ngOnInit() {
+    this.checkedIn = this.items.reduce((num, item) => num += item.checkedIn ? 1 : 0, 0)
   }
 
 }
