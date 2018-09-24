@@ -30,4 +30,12 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
   }
 
+  handleRemove(event) {
+      console.log(event)
+  }
+
+  handleEdit(event) {
+    console.log(event)
+  }
+
 }
