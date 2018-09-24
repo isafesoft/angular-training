@@ -31,10 +31,18 @@ export class DashboardComponent implements OnInit {
   }
 
   handleRemove(event) {
-      console.log(event)
+    this.passengers = this.passengers.filter((p: Passenger) => {
+      return p.id !== event.id
+    })
   }
 
   handleEdit(event) {
+    this.passengers = this.passengers.map((p: Passenger) => {
+      if(p.id === event.id) {
+        p = {...p, ...event}
+      }
+      return p
+    })
     console.log(event)
   }
 

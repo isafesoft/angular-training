@@ -13,7 +13,11 @@ export class CountComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngOnChanges() {
     this.checkedIn = this.items.reduce((num, item) => num += item.checkedIn ? 1 : 0, 0)
+    console.log('changes..')
   }
 
 }
