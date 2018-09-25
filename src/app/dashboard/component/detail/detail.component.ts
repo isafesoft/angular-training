@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, OnChanges} from '@angular/core';
 import {Passenger} from '../../../models/passenger';
 
 @Component({
@@ -7,7 +7,7 @@ import {Passenger} from '../../../models/passenger';
   styleUrls: ['./detail.component.scss']
 })
 
-export class DetailComponent implements OnInit {
+export class DetailComponent implements OnInit, OnChanges {
 
   @Input() detail: Passenger;
   @Output() remove: EventEmitter<Passenger> = new EventEmitter();
@@ -20,6 +20,12 @@ export class DetailComponent implements OnInit {
 
   onUpdateName(newName) {
     this.detail.fullname = newName
+  }
+
+  ngOnChanges(change) {
+    if(change.detail) {
+      this.detail = {...change.detail.currentValue}
+    }
   }
 
   toggleEdit() {
