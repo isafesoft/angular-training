@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import {Passenger} from '../models/passenger';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PassengersService {
 
-  constructor() { }
+  constructor(private http: HttpClient) {
+    console.log(this.http)
+  }
   getPassengers(): Passenger[] {
     return [{
       id: 1,
