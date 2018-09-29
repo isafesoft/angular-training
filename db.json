@@ -1,3 +1,19 @@
 {
+  "api": {
 
+  "passengers": [{
+    "id": "1",
+    "fullname": "ephen",
+    "checkedIn": true,
+    "checkedInDate": "149074200000",
+    "children": [{"name": "obe", "age": 6}, {"name": "ony", "age": "9"}]
+  },
+    {
+      "id": "2",
+      "fullname": "ark",
+      "checkedIn": "false",
+      "checkedInDate": null,
+      "children": null
+      }]
+  }
 }

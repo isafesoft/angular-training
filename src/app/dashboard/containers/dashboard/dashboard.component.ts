@@ -12,7 +12,7 @@ export class DashboardComponent implements OnInit {
 
    passengers: Passenger[];
     constructor(private passengerService: PassengersService) {
-    this.passengers = passengerService.getPassengers();
+    passengerService.getPassengers().subscribe(obj => this.passengers = obj['passengers']);
   }
 
   ngOnInit() {
