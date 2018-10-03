@@ -19,6 +19,10 @@ export class PassengersService {
      return this.http.get(HOST_URL + PASSENGER_API);
   }
 
+  getPassenger(id: number): Observable<Object> {
+    return this.http.get(HOST_URL + PASSENGER_API + `/${id}`);
+  }
+
   updatePassenger(passenger: Passenger): Observable<Object> {
 
     const httpOptions = {
