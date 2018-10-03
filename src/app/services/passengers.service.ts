@@ -33,4 +33,5 @@ export class PassengersService {
   removePassenger(passenger: Passenger): Observable<Object> {
     return this.http.delete(HOST_URL + PASSENGER_API + '/' + passenger.id);
   }
+
 }
