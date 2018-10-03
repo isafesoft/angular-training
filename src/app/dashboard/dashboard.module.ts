@@ -5,19 +5,23 @@ import {CountComponent} from './component/count/count.component';
 import {DetailComponent} from './component/detail/detail.component';
 import {HttpClientModule} from '@angular/common/http';
 import { DashboardViewerComponent } from './containers/dashboard-viewer/dashboard-viewer.component';
+import { PassengerFormComponent } from './component/passenger-form/passenger-form.component';
+import {FormsModule} from '@angular/forms';
 
 
 // module configuration
 @NgModule({
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   declarations: [
     DashboardComponent,
     CountComponent,
     DetailComponent,
-    DashboardViewerComponent
+    DashboardViewerComponent,
+    PassengerFormComponent
   ],
   exports: [
     DashboardComponent,
