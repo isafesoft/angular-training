@@ -6,9 +6,34 @@
   <div>
     Passenger ID:
     <input type="number" name="id" [ngModel]="detail?.id">
-    {{ form.value | json}}
+    <div *ngIf="form.value.checkedIn">
+      Checked in:
+      <input type="number" name="checkedInDate"
+             [ngModel]="detail?.checkedInDate"
+      >
+
+    </div>
+    Form Value: {{ form.value | json}}
   </div>
   <div>
-    {{ detail | json }}
+    <label>
+    <input type="radio"
+    name="checkedIn"
+           [value]="true"
+    [ngModel]="detail?.checkedIn"
+           (ngModelChange)="toggleCheckedIn($event)"
+    >
+      Yes
+    </label>
+    <label>
+    <input type="radio"
+           name="checkedIn"
+           [value]="false"
+           [ngModel]="detail?.checkedIn">
+      No
+    </label>
+  </div>
+  <div>
+    org: {{ detail | json }}
   </div>
 </form>
