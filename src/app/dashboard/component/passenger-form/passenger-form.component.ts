@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Passenger} from '../../../models/passenger';
+import {Baggage} from '../../../models/baggage';
 
 @Component({
   selector: 'app-passenger-form',
@@ -9,7 +10,22 @@ import {Passenger} from '../../../models/passenger';
 export class PassengerFormComponent implements OnInit {
 
   @Input() detail: Passenger = null;
-  constructor() { }
+  baggage: Baggage[];
+  constructor() {
+    this.baggage = [{
+      key: 'none',
+      value: 'No Baggage'
+    },
+      {
+        key: 'hand',
+        value: 'Hand Bag'
+      },
+      {
+        key: 'hold',
+        value: 'Hold Bag'
+      }
+    ]
+  }
 
   ngOnInit() {
   }

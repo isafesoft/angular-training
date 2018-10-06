@@ -43,6 +43,18 @@
       Checked in
     </label>
   </div>
+  <hr>
+  <div>
+    <label>
+      <select name="baggage" [ngModel]="detail?.luggage">
+        <option *ngFor="let b of baggage"
+                [value]="b.key"
+                [selected]="b.key === detail?.luggage"
+                [ngValue]="b.key"
+        >{{ b.value }}</option>
+      </select>
+    </label>
+  </div>
   <div>
     org: {{ detail | json }}
   </div>
