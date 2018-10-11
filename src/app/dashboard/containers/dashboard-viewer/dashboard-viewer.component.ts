@@ -16,4 +16,11 @@ export class DashboardViewerComponent implements OnInit {
     this.passengerService.getPassenger(1).subscribe(obj => this.passenger = <Passenger>obj)
   }
 
+  onUpdatePassenger(p: Passenger) {
+    this.passengerService
+      .updatePassenger(p)
+      .subscribe((obj) => {
+        this.passenger = {...this.passenger, ...<Passenger>obj}
+      })
+  }
 }
