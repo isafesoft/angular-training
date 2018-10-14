@@ -13,7 +13,10 @@ import {RouterModule, Routes} from '@angular/router';
 const routes: Routes = [
   {
     path: 'passengers',
-    component: DashboardComponent
+    children: [
+      {path: '', component: DashboardComponent},
+      {path: ':id', component: DashboardViewerComponent}
+    ]
   }
 ]
 
