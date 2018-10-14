@@ -7,14 +7,23 @@ import {HttpClientModule} from '@angular/common/http';
 import { DashboardViewerComponent } from './containers/dashboard-viewer/dashboard-viewer.component';
 import { PassengerFormComponent } from './component/passenger-form/passenger-form.component';
 import {FormsModule} from '@angular/forms';
+import {RouterModule, Routes} from '@angular/router';
 
+
+const routes: Routes = [
+  {
+    path: 'passengers',
+    component: DashboardComponent
+  }
+]
 
 // module configuration
 @NgModule({
   imports: [
     CommonModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forChild(routes)
   ],
   declarations: [
     DashboardComponent,

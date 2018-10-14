@@ -1,8 +1,14 @@
 <div class="app">
   <h3>Airline Passengers</h3>
-  <a routerLink="/">Home</a>
-  <a routerLink="/oops">404</a>
+  <div class="nav">
+
+  <a *ngFor="let link of nav"
+     [routerLink]="link.link"
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{ exact: link.exact}"
+  >{{ link.name }}</a>
   <router-outlet></router-outlet>
+  </div>
   <!--<app-dashboard></app-dashboard>-->
   
 </div>
